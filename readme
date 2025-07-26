@@ -1,0 +1,98 @@
+🔐 Face-Lock Folder Access
+A security-focused desktop application that restricts access to folders using facial recognition. The app ensures only the authorized user can open the folder — any unauthorized attempt triggers an automatic folder closure.
+
+🧠 How It Works
+Folder is opened → Triggers the app.
+
+Camera activates → Captures the current user's face.
+
+Face vector comparison:
+
+Converts the stored authorized user's face into black and white.
+
+Uses face recognition algorithm to extract facial features.
+
+Converts features into a vector.
+
+Repeats the same process with the newly captured face.
+
+Cosine Similarity Check:
+
+Compares both face vectors.
+
+If similarity is above threshold, folder stays open.
+
+If below, the folder closes immediately.
+
+⚙️ Technologies Used
+Python
+
+OpenCV (cv2)
+
+dlib or face_recognition
+
+NumPy
+
+Scikit-learn (for cosine similarity)
+
+🚀 Features
+🔒 Face-based access control
+
+🖼️ Converts images to grayscale for feature extraction
+
+📐 Cosine similarity for precise face match
+
+🗂️ Real-time folder protection
+
+👤 Works offline after initial setup
+
+📸 Example Flow
+First-time setup: Capture your face to register.
+
+Next time you open the folder:
+
+Camera turns on
+
+Your current face is captured and processed
+
+If it's you, access is granted
+
+If not, access is denied and the folder is closed instantly
+
+🛡️ Why Use This?
+Prevents unauthorized access to sensitive folders
+
+Lightweight and efficient
+
+Easy to set up, yet hard to bypass
+
+🧪 Setup & Usage
+Clone this repo:
+
+git clone https://github.com/yourusername/face-lock-folder.git
+cd face-lock-folder
+Install dependencies:
+
+pip install -r requirements.txt
+Run the app:
+
+python main.py
+Register your face:
+
+Follow on-screen instructions to capture your authorized image.
+
+Link the folder you want to protect.
+
+📂 Folder Integration
+Note: Actual folder locking is simulated by closing the folder window using OS-level commands. This may vary by operating system (Windows, macOS, Linux).
+
+⚠️ Disclaimer
+This is a project-level security app and should not replace enterprise-grade encryption or protection for highly sensitive files.
+
+🧑‍💻 Author
+[Mohamed Heni]
+📧 [mohamedheni1111@gmail.com]
+
+
+⭐ Star This Repo
+If you like this project, please consider giving it a ⭐ on GitHub to support the work!
